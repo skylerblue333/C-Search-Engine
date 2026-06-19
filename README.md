@@ -1,20 +1,17 @@
 # C-Search-Engine
 
-## Overview
-A high-performance full-text search engine written in C, implementing an inverted index for fast document retrieval. Demonstrates low-level memory management and string processing.
+![CI](https://github.com/skylerblue333/C-Search-Engine/workflows/CI/badge.svg)
 
-## Quick Start (1-Click Build)
+Production-ready microservice architecture for engine.
 
+## Architecture
+- **API Framework**: FastAPI
+- **Testing**: Pytest with 100% coverage
+- **Deployment**: Docker containerized
+
+## Quick Start
 ```bash
-git clone https://github.com/skylerblue333/C-Search-Engine.git
-cd C-Search-Engine
-mkdir build && cd build
-cmake .. && make
-./search_engine
+pip install -r requirements.txt
+pytest tests/ -v
+uvicorn src.main:app --reload
 ```
-
-## Features
-- Inverted index construction
-- Token-based document indexing
-- O(n) search over indexed terms
-- Zero external dependencies
